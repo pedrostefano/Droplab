@@ -28,8 +28,8 @@ Obj/
 
 # Visual Studio 2015 cache/options directory
 .vs/
-/wwwroot/dist/
-/ClientApp/dist/
+src/Droplab.Web/wwwroot/dist/
+src/Droplab.Web/ClientApp/dist/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -183,7 +183,7 @@ ClientBin/
 *.publishsettings
 orleans.codegen.cs
 
-/node_modules
+src/Droplab.Web/node_modules
 
 /yarn.lock
 
