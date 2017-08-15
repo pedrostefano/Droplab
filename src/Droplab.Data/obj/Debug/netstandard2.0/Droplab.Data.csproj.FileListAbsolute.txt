@@ -1,0 +1,8 @@
+/Users/pedrostefano/Desktop/Droplab/src/Droplab.Data/bin/Debug/netstandard2.0/Droplab.Data.deps.json
+/Users/pedrostefano/Desktop/Droplab/src/Droplab.Data/bin/Debug/netstandard2.0/Droplab.Data.dll
+/Users/pedrostefano/Desktop/Droplab/src/Droplab.Data/bin/Debug/netstandard2.0/Droplab.Data.pdb
+/Users/pedrostefano/Desktop/Droplab/src/Droplab.Data/obj/Debug/netstandard2.0/Droplab.Data.csproj.CoreCompileInputs.cache
+/Users/pedrostefano/Desktop/Droplab/src/Droplab.Data/obj/Debug/netstandard2.0/Droplab.Data.AssemblyInfoInputs.cache
+/Users/pedrostefano/Desktop/Droplab/src/Droplab.Data/obj/Debug/netstandard2.0/Droplab.Data.AssemblyInfo.cs
+/Users/pedrostefano/Desktop/Droplab/src/Droplab.Data/obj/Debug/netstandard2.0/Droplab.Data.dll
+/Users/pedrostefano/Desktop/Droplab/src/Droplab.Data/obj/Debug/netstandard2.0/Droplab.Data.pdb
