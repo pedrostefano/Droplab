@@ -17,10 +17,12 @@ const treeShakableModules = [
 const nonTreeShakableModules = [
     'bootstrap',
     'bootstrap/dist/css/bootstrap.css',
+    'admin-lte',
+    'admin-lte/dist/css/AdminLTE.css',
     'es6-promise',
     'es6-shim',
     'event-source-polyfill',
-    'jquery',
+    'jquery', 
 ];
 const allModules = treeShakableModules.concat(nonTreeShakableModules);
 
@@ -32,7 +34,7 @@ module.exports = (env) => {
         resolve: { extensions: [ '.js' ] },
         module: {
             rules: [
-                { test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, use: 'url-loader?limit=100000' }
+                { test: /\.(png|jpg|woff|woff2|eot|ttf|svg)(\?|$)/, use: 'url-loader?limit=100000' }
             ]
         },
         output: {
