@@ -16,11 +16,16 @@ namespace Droplab.Data
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Order>().ToTable("T_ORDER");
             modelBuilder.Entity<OrderItem>().ToTable("T_ORDER_ITEM");
             modelBuilder.Entity<State>().ToTable("T_STATE");
+
+            modelBuilder.Entity<Order>().HasKey(m => m.Id); 
+            modelBuilder.Entity<OrderItem>().HasKey(m => m.Id); 
+            modelBuilder.Entity<State>().HasKey(m => m.Id); 
+
+            base.OnModelCreating(modelBuilder);
 
         }
     }

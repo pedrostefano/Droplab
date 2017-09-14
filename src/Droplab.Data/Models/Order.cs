@@ -8,7 +8,7 @@ namespace Droplab.Data.Models
         public DateTime CreatedDate { get; set; }
 
         public State State { get; set; }
-        public int StateId { get; set; }
+        public long StateId { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; }
         
     }

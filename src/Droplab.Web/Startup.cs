@@ -26,9 +26,11 @@ namespace Droplab_Web
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             
+            //services.AddDbContext<DroplabDbContext>(options => 
+            //    options.UseSqlServer(Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("Droplab.Web")));
             services.AddDbContext<DroplabDbContext>(options => 
-                options.UseSqlServer(Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("Droplab.Web")));
-            
+                options.UseSqlite(Configuration.GetConnectionString("SqliteConnectionString"), b => b.MigrationsAssembly("Droplab.Web")));
+                
             services.AddMvc();
         }
 

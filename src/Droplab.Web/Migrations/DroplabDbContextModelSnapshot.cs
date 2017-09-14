@@ -17,19 +17,18 @@ namespace Droplab.Web.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.0-rtm-26452")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "2.0.0-rtm-26452");
 
             modelBuilder.Entity("Droplab.Data.Models.Order", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("CreatedDate");
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("StateId");
+                    b.Property<long>("StateId");
 
                     b.HasKey("Id");
 
@@ -40,12 +39,12 @@ namespace Droplab.Web.Migrations
 
             modelBuilder.Entity("Droplab.Data.Models.OrderItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("OrderId");
+                    b.Property<long>("OrderId");
 
                     b.HasKey("Id");
 
@@ -56,7 +55,7 @@ namespace Droplab.Web.Migrations
 
             modelBuilder.Entity("Droplab.Data.Models.State", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
