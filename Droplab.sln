@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Droplab.Web", "src\Droplab.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Droplab.Data", "src\Droplab.Data\Droplab.Data.csproj", "{E6733097-733C-42E9-BED3-A694C17951F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Droplab.Simulator", "src\Droplab.Simulator\Droplab.Simulator.csproj", "{55E355B4-D0C3-4887-90A4-DCBD696393B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,9 +48,22 @@ Global
 		{E6733097-733C-42E9-BED3-A694C17951F7}.Release|x64.Build.0 = Release|x64
 		{E6733097-733C-42E9-BED3-A694C17951F7}.Release|x86.ActiveCfg = Release|x86
 		{E6733097-733C-42E9-BED3-A694C17951F7}.Release|x86.Build.0 = Release|x86
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Debug|x64.Build.0 = Debug|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Debug|x86.Build.0 = Debug|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Release|x64.ActiveCfg = Release|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Release|x64.Build.0 = Release|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{902A6B3D-4A56-45AF-9F68-F52F4FAC56C1} = {9D42E68B-C9DD-4898-8519-3F4836F6B123}
 		{E6733097-733C-42E9-BED3-A694C17951F7} = {9D42E68B-C9DD-4898-8519-3F4836F6B123}
+		{55E355B4-D0C3-4887-90A4-DCBD696393B0} = {9D42E68B-C9DD-4898-8519-3F4836F6B123}
 	EndGlobalSection
 EndGlobal

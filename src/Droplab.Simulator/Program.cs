@@ -1,6 +1,6 @@
 ﻿using System;
 using Droplab.Data;
-
+using Droplab.Data.Repositories;
 
 namespace Droplab.Simulator
 {
@@ -8,7 +8,10 @@ namespace Droplab.Simulator
     {
         static void Main(string[] args)
         {
+
+            var repo = new Repository<Order>();
             
+
 
 
 
