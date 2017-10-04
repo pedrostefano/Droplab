@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppModuleShared } from './app.module.shared';
 import { AppComponent } from './components/app/app.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
     bootstrap: [ AppComponent ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppModuleShared
     ],
     providers: [

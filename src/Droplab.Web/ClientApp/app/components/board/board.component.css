@@ -1,0 +1,11 @@
+.example-container {
+    max-width: 800px;
+    margin: 20px;
+}
+
+.example-button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
