@@ -1,4 +1,55 @@
-<nav-menu></nav-menu>
-<div class="container">
-    <router-outlet></router-outlet>
+        
+<div class="app-frame">
+           
+    <md-toolbar color="primary" class="fixed-toolbar">
+
+        <button md-button (click)="sidenav.toggle()">
+            <md-icon>menu</md-icon>
+        </button>
+        <span class="toolbar-header">Droplab</span>
+        
+        <span class="example-spacer"></span>
+        
+        <button md-button [mdMenuTriggerFor]="componentsMenu">
+            <md-icon>more_vert</md-icon> 
+        </button>
+    
+        <md-menu #componentsMenu="mdMenu" class="sticky-overlay">
+            <button md-menu-item [routerLink]="['/home']" routerLinkActive="active" >Home</button>
+            <button md-menu-item [routerLink]="['/board']" routerLinkActive="active" >Board</button>
+            <button md-menu-item [routerLink]="['/counter']" routerLinkActive="active" >Count</button>
+            <button md-menu-item [routerLink]="['/fetch-data']" routerLinkActive="active" >FetchData</button>
+        </md-menu>
+    </md-toolbar>
+
+    <md-sidenav-container [ngClass]="materialTheme">
+                
+        <md-sidenav #sidenav>
+                <md-nav-list>
+                    <a md-list-item routerLink="/home" routerLinkActive="active">Home</a>
+                    <md-divider></md-divider>
+                    <h3 md-subheader>Getting Started</h3>
+                    <a md-list-item routerLink="/setup" routerLinkActive="active">Setup</a>
+                    <a md-list-item routerLink="/theming" routerLinkActive="active">Theming</a>
+                    <a md-list-item routerLink="/typography" routerLinkActive="active">Typography</a>
+                    <a md-list-item routerLink="/data-table" routerLinkActive="active">Data Table</a>
+                    <md-divider></md-divider>
+                    <h3 md-subheader>Form Controls</h3>
+                    <a md-list-item routerLink="/autocomplete" routerLinkActive="active">Autocomplete</a>
+                    <a md-list-item routerLink="/checkbox" routerLinkActive="active">Checkbox</a>
+                    <a md-list-item routerLink="/datepicker" routerLinkActive="active">Datepicker</a>
+                    <a md-list-item routerLink="/input" routerLinkActive="active">Input</a>
+                    <a md-list-item routerLink="/radio" routerLinkActive="active">Radio</a>
+                    <a md-list-item routerLink="/select" routerLinkActive="active">Select</a>
+                    <a md-list-item routerLink="/slider" routerLinkActive="active">Slider</a>
+                    <a md-list-item routerLink="/slide-toggle" routerLinkActive="active">Slide Toggle</a>
+                </md-nav-list>
+        </md-sidenav>
+
+        <div class="app-body">
+            <router-outlet></router-outlet>            
+        </div>
+
+    </md-sidenav-container>
+
 </div>

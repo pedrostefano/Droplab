@@ -8,6 +8,7 @@ import { AngularMaterialModule } from './app.module.material';
 
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
+import { SideNavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
@@ -17,6 +18,7 @@ import { BoardComponent } from "./components/board/board.component";
     declarations: [
         AppComponent,
         NavMenuComponent,
+        SideNavComponent,
         CounterComponent,
         FetchDataComponent,
         BoardComponent,

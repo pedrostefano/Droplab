@@ -1,10 +1,75 @@
 import { NgModule } from '@angular/core';
 
-import {MdButtonModule, MdCheckboxModule, MdOptionModule, MdSelectModule} from '@angular/material';
+import {
+  FullscreenOverlayContainer,
+  MdAutocompleteModule,
+  MdButtonModule,
+  MdButtonToggleModule,
+  MdCardModule,
+  MdCheckboxModule,
+  MdChipsModule,
+  MdDatepickerModule,
+  MdDialogModule,
+  MdGridListModule,
+  MdIconModule,
+  MdInputModule,
+  MdListModule,
+  MdMenuModule,
+  MdNativeDateModule,
+  MdProgressBarModule,
+  MdProgressSpinnerModule,
+  MdRadioModule,
+  MdRippleModule,
+  MdSelectModule,
+  MdSidenavModule,
+  MdSliderModule,
+  MdSlideToggleModule,
+  MdSnackBarModule,
+  MdTabsModule,
+  MdToolbarModule,
+  MdTooltipModule,
+  OverlayContainer,
+  MdTableModule,
+  MdPaginatorModule,
+  MdSortModule
+} from '@angular/material';
+import { 
+  CdkTableModule 
+} from '@angular/cdk/table';
 
 @NgModule({
-  imports: [MdButtonModule, MdOptionModule, MdSelectModule],
-  exports: [MdButtonModule, MdOptionModule, MdSelectModule],
+  exports: [
+      MdAutocompleteModule,
+      MdButtonModule,
+      MdButtonToggleModule,
+      MdCardModule,
+      MdCheckboxModule,
+      MdChipsModule,
+      MdDatepickerModule,
+      MdDialogModule,
+      MdGridListModule,
+      MdIconModule,
+      MdInputModule,
+      MdListModule,
+      MdMenuModule,
+      MdProgressBarModule,
+      MdProgressSpinnerModule,
+      MdRadioModule,
+      MdRippleModule,
+      MdSelectModule,
+      MdSidenavModule,
+      MdSlideToggleModule,
+      MdSliderModule,
+      MdSnackBarModule,
+      MdTabsModule,
+      MdToolbarModule,
+      MdTooltipModule,
+      MdNativeDateModule,
+      MdTableModule,
+      MdPaginatorModule,
+      MdSortModule,
+      CdkTableModule
+  ]
 })
 export class AngularMaterialModule {
   

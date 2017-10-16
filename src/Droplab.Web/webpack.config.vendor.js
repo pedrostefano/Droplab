@@ -24,6 +24,7 @@ const nonTreeShakableModules = [
     'es6-shim',
     'event-source-polyfill',
     'jquery',   
+    'hammerjs',   
 ];
 const allModules = treeShakableModules.concat(nonTreeShakableModules);
 
