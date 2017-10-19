@@ -5,9 +5,6 @@ namespace Droplab.Data
 {
     public interface IUnitOfWork
     {
-        IOrderRepository Orders { get; }
-
 		Task CompleteAsync();
-      
     }
 }

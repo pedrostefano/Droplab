@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Droplab.Data;
+using Droplab.Data.Models;
+using Droplab.Data.Repositories;
+using Droplab.Data.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -23,14 +26,15 @@ namespace Droplab_Web
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            
+        {                        
             //services.AddDbContext<DroplabDbContext>(options => 
             //    options.UseSqlServer(Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("Droplab.Web")));
             services.AddDbContext<DroplabDbContext>(options => 
                 options.UseSqlite(Configuration.GetConnectionString("SqliteConnectionString"), b => b.MigrationsAssembly("Droplab.Web")));
                 
+            services.AddScoped(typeof(IRepository<Order>), typeof(OrderRepository));
+            services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
+
             services.AddMvc();
         }
 
