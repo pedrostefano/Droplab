@@ -1,20 +1,21 @@
 
-<md-toolbar color="primary" class="fixed-toolbar">
-    <button md-button (click)="sidenav.toggle()">
-        <md-icon>menu</md-icon>
+<mat-toolbar color="primary" class="fixed-toolbar">
+    <button mat-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
     </button>
+
     <span class="toolbar-header">Droplab</span>
     
     <span class="example-spacer"></span>
-    
-    <button md-button [mdMenuTriggerFor]="componentsMenu">
-        <md-icon>more_vert</md-icon> 
+        
+    <button mat-button [matMenuTriggerFor]="componentsMenu">
+        <mat-icon>more_vert</mat-icon> 
     </button>
 
-    <md-menu #componentsMenu="mdMenu" class="sticky-overlay">
-        <button md-menu-item [routerLink]="['/home']" routerLinkActive="active" >Home</button>
-        <button md-menu-item [routerLink]="['/board']" routerLinkActive="active" >Board</button>
-        <button md-menu-item [routerLink]="['/counter']" routerLinkActive="active" >Count</button>
-        <button md-menu-item [routerLink]="['/fetch-data']" routerLinkActive="active" >FetchData</button>
-    </md-menu>
-</md-toolbar>
+    <mat-menu #componentsMenu="matMenu" class="sticky-overlay">
+        <button mat-menu-item [routerLink]="['/home']" routerLinkActive="active" >Home</button>
+        <button mat-menu-item [routerLink]="['/board']" routerLinkActive="active" >Board</button>
+        <button mat-menu-item [routerLink]="['/counter']" routerLinkActive="active" >Count</button>
+        <button mat-menu-item [routerLink]="['/fetch-data']" routerLinkActive="active" >FetchData</button>
+    </mat-menu>
+</mat-toolbar>
