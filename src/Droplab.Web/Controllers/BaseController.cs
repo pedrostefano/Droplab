@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Droplab.Data;
 using Droplab.Data.Repositories.Interfaces;
-using Droplab.Web.ViewModels;
+using Droplab.VOs.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Droplab.Web.Controllers
@@ -10,10 +10,10 @@ namespace Droplab.Web.Controllers
     where TEntity : class 
     where VO : class 
     {
-        protected readonly IRepository<TEntity> _repository;
+        protected readonly IRepository<TEntity, VO> _repository;
         protected readonly IUnitOfWork _unitOfWork;
 
-        public BaseController(IRepository<TEntity> repository, IUnitOfWork unitOfWork)
+        public BaseController(IRepository<TEntity, VO> repository, IUnitOfWork unitOfWork)
         {
             this._unitOfWork = unitOfWork;
             this._repository = repository;

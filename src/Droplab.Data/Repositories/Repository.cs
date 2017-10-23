@@ -5,12 +5,15 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Droplab.Data.Models;
 using Droplab.Data.Repositories.Interfaces;
+using Droplab.VOs.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace Droplab.Data.Repositories
 {
-    public class Repository<TEntity> : IRepository<TEntity> 
+    public abstract class Repository<TEntity, VO> : IRepository<TEntity, VO> 
     where TEntity : BaseEntity, new()
+    where VO : BaseVO, new()
+    
     {
         protected readonly DroplabDbContext _context;
         protected readonly DbSet<TEntity> _entities;
@@ -46,6 +49,7 @@ namespace Droplab.Data.Repositories
         public virtual int Count() => _entities.Count();
         public virtual IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate) => _entities.Where(predicate);
         public virtual TEntity GetSingleOrDefault(Expression<Func<TEntity, bool>> predicate) => _entities.SingleOrDefault(predicate);
-
+        public abstract Task<TEntity> ToEntity(VO vo);
+        public abstract VO ToVo(TEntity entity);
     }
 }

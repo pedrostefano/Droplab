@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Droplab.Data;
 using Droplab.Data.Models;
 using Droplab.Data.Repositories.Interfaces;
-using Droplab.Web.ViewModels;
+using Droplab.VOs.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Droplab.Web.Controllers
@@ -10,8 +10,8 @@ namespace Droplab.Web.Controllers
     [Route("/api/order")]
     public class OrderController : BaseController <Order, OrderVO>
     {
-        public OrderController(IRepository<Order> repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
-        {
+        public OrderController(IOrderRepository repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
+        {            
         }
 
         [HttpGet("{id}")]
@@ -37,11 +37,7 @@ namespace Droplab.Web.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var entity  = await _repository.Get(vo.Id) ?? new Order
-            {
-                Name = vo.Name,
-                StateId = vo.StateId
-            };
+            var entity = await _repository.ToEntity(vo);
 
             if (entity.Id > 0){
                 _repository.Update(entity);
@@ -53,13 +49,7 @@ namespace Droplab.Web.Controllers
 
             entity = await _repository.Get(entity.Id);
 
-            vo = new OrderVO(){
-                Id = entity.Id,
-                Name = entity.Name,
-                StateId = entity.StateId
-            };
-
-            return Ok(vo);
+            return Ok(_repository.ToVo(entity));
         }
 
         [HttpGet]        

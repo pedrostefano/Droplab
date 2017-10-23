@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace Droplab.Data.Repositories.Interfaces
 {
-  public interface IRepository<TEntity> where TEntity : class
+  public interface IRepository<TEntity, VO> 
+  where TEntity : class
+  where VO : class
     {
         Task<TEntity> Get(long id);
         Task<IEnumerable<TEntity>> GetAll(int offset, int limit);
@@ -18,6 +20,9 @@ namespace Droplab.Data.Repositories.Interfaces
         int Count();
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
         TEntity GetSingleOrDefault(Expression<Func<TEntity, bool>> predicate);
+        Task<TEntity> ToEntity(VO vo);
+        VO ToVo(TEntity entity);
+        
 
     }
 }

@@ -6,6 +6,7 @@ using Droplab.Data;
 using Droplab.Data.Models;
 using Droplab.Data.Repositories;
 using Droplab.Data.Repositories.Interfaces;
+using Droplab.VOs.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -32,7 +33,7 @@ namespace Droplab_Web
             services.AddDbContext<DroplabDbContext>(options => 
                 options.UseSqlite(Configuration.GetConnectionString("SqliteConnectionString"), b => b.MigrationsAssembly("Droplab.Web")));
                 
-            services.AddScoped(typeof(IRepository<Order>), typeof(OrderRepository));
+            services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 
             services.AddMvc();

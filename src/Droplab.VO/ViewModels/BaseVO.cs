@@ -1,4 +1,4 @@
-namespace Droplab.Web.ViewModels
+namespace Droplab.VOs.ViewModels
 {
     public class BaseVO
     {
