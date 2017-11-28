@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 
 import { AngularMaterialModule } from './app.module.material';
 
+import { AppRouter } from './app.routing';
+import { AppConfig } from './app.config';
+
 import { AppComponent } from './components/app/app.component';
-import { NavMenuComponent } from './components/navmenu/navmenu.component';
-import { SideNavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
@@ -17,8 +17,6 @@ import { BoardComponent } from "./components/board/board.component";
 @NgModule({
     declarations: [
         AppComponent,
-        NavMenuComponent,
-        SideNavComponent,
         CounterComponent,
         FetchDataComponent,
         BoardComponent,
@@ -29,14 +27,10 @@ import { BoardComponent } from "./components/board/board.component";
         HttpModule,
         FormsModule,
         AngularMaterialModule,
-        RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent },
-            { path: 'board', component: BoardComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
-            { path: '**', redirectTo: 'home' }
-        ])
+        AppRouter
+    ],
+    providers: [
+        AppConfig
     ]
 })
 export class AppModuleShared {
