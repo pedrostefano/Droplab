@@ -11,9 +11,10 @@ using System;
 namespace Droplab.Web.Migrations
 {
     [DbContext(typeof(DroplabDbContext))]
-    partial class DroplabDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180111000127_AddUser")]
+    partial class AddUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

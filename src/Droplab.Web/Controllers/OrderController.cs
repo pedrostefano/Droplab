@@ -3,10 +3,12 @@ using Droplab.Data;
 using Droplab.Data.Models;
 using Droplab.Data.Repositories.Interfaces;
 using Droplab.VOs.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Droplab.Web.Controllers
 {
+    [Authorize]
     [Route("/api/order")]
     public class OrderController : BaseController <Order, OrderVO>
     {
